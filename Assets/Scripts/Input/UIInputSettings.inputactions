@@ -1,0 +1,33 @@
+{
+    "name": "UIInputSettings",
+    "maps": [
+        {
+            "name": "TogglePanels",
+            "id": "78e3b59c-fcc3-403a-8335-6613835b0ac8",
+            "actions": [
+                {
+                    "name": "SkillPanel",
+                    "type": "Button",
+                    "id": "0c15a585-7df5-4f71-9c1c-f7a2a2319b76",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3248aa96-0e84-466e-8caa-c3d9fbbc7008",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SkillPanel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

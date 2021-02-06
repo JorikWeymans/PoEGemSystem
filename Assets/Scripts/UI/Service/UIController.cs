@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Jorik.Input;
 
 namespace Jorik
 {
@@ -11,6 +12,8 @@ namespace Jorik
         private Dictionary<string, UIPanel> _Panels = new Dictionary<string, UIPanel>();
         private List<UIPanel> _ActivePanels = new List<UIPanel>();
         public UIPanel TopMostPanel => _ActivePanels.Count > 0 ? _ActivePanels[0] : null;
+
+        private Input.Input _Input = default;
 
         private void Awake()
         {
@@ -24,10 +27,16 @@ namespace Jorik
                 panel.gameObject.SetActive(false);
             }
 
+            _Input = Resources.Load<Input.Input>("DefaultInput");
+            _Input.Generate();
+
+            _Input.UIInput.TogglePanels.SkillPanel.performed += _ => CheckInput();
+
             ServiceLocator.UI = this;
         }
         private void Update()
         {
+
             TopMostPanel?.UpdatePanel(Time.deltaTime);
         }
 
@@ -118,6 +127,18 @@ namespace Jorik
         {
             var newParams = new MessagePanelParams { AnswerHandler = answerHandler, Message = text, Type = MessageType.YesNoQuestion };
             OpenPanel(MessagePanel.Name, newParams);
+        }
+
+        private void CheckInput()
+        {
+            if (IsOpen("SkillPanel"))
+            {
+                ClosePanel("SkillPanel");
+            }
+            else
+            {
+                OpenPanel("SkillPanel");
+            }
         }
     }
 }
