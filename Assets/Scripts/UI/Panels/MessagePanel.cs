@@ -9,7 +9,6 @@ namespace Jorik
 {
     public sealed class MessagePanel : UIPanel
     {
-        public static readonly string Name = "MessagePanel";
 
         [SerializeField] private TMP_Text _Text = null;
 
@@ -69,7 +68,7 @@ namespace Jorik
 
         private void CloseWithAnswer(DialogResult answer)
         {
-            ServiceLocator.UI.ClosePanel(Name);
+            ServiceLocator.UI.ClosePanel(PanelNames.MessagePanel);
             _myParams.AnswerHandler?.Invoke(answer);
         }
     }

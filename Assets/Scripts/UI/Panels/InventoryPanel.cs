@@ -1,10 +1,9 @@
 ﻿//Created by Jorik Weymans 2020
 
-
 namespace Jorik
 {
-	public sealed class SkillPanel : UIPanel
-	{
+    public sealed class InventoryPanel : UIPanel
+    {
 
         protected override void InternalAwake()
         {
@@ -21,7 +20,7 @@ namespace Jorik
 
         private void CloseWithAnswer(DialogResult answer)
         {
-            
+
         }
     }
 }

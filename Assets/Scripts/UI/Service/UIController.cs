@@ -30,7 +30,8 @@ namespace Jorik
             _Input = Resources.Load<Input.Input>("DefaultInput");
             _Input.Generate();
 
-            _Input.UIInput.TogglePanels.SkillPanel.performed += _ => CheckInput();
+            _Input.UIInput.TogglePanels.SkillPanel.performed += _ => ToggleSkillPanel();
+            _Input.UIInput.TogglePanels.InventoryPanel.performed += _ => ToggleInventoryPanel();
 
             ServiceLocator.UI = this;
         }
@@ -121,23 +122,35 @@ namespace Jorik
         public void DisplayMessage(string text, Action<DialogResult> answerHandler = null)
         {
             var newParams = new MessagePanelParams { AnswerHandler = answerHandler, Message = text, Type = MessageType.Message };
-            OpenPanel(MessagePanel.Name, newParams);
+            OpenPanel(PanelNames.MessagePanel, newParams);
         }
         public void AskQuestion(string text, Action<DialogResult> answerHandler = null)
         {
             var newParams = new MessagePanelParams { AnswerHandler = answerHandler, Message = text, Type = MessageType.YesNoQuestion };
-            OpenPanel(MessagePanel.Name, newParams);
+            OpenPanel(PanelNames.MessagePanel, newParams);
         }
 
-        private void CheckInput()
+        private void ToggleSkillPanel()
         {
-            if (IsOpen("SkillPanel"))
+            if (IsOpen(PanelNames.SkillPanel))
             {
-                ClosePanel("SkillPanel");
+                ClosePanel(PanelNames.SkillPanel);
             }
             else
             {
-                OpenPanel("SkillPanel");
+                OpenPanel(PanelNames.SkillPanel);
+            }
+        }
+
+        private void ToggleInventoryPanel()
+        {
+            if (IsOpen(PanelNames.InventoryPanel))
+            {
+                ClosePanel(PanelNames.InventoryPanel);
+            }
+            else
+            {
+                OpenPanel(PanelNames.InventoryPanel);
             }
         }
     }
