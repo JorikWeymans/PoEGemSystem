@@ -1,4 +1,4 @@
-﻿//Created by Jorik Weymans 2020
+﻿//Created by Jorik Weymans 2021
 
 using System;
 using UnityEngine;
@@ -30,9 +30,15 @@ namespace Jorik
         [SerializeField] public GemState _State = GemState.CharacterInventory;
         [SerializeField] private GemAttribute _Attribute = GemAttribute.Intelligence;
 
+        private void Start()
+        {
+            //Temporary while testing the gem system to work with one gem
+            Cursor.SetGem(this);
+        }
 
         private void Update()
         {
+            //Debug.Log(Mouse.current.position.ReadValue());
             switch (_State)
             {
                 case GemState.CharacterInventory:
@@ -40,7 +46,11 @@ namespace Jorik
                 case GemState.Cursor:
                 {
                     transform.position = new Vector3(Mouse.current.position.x.ReadValue(), Mouse.current.position.y.ReadValue());
-                }
+
+                    Vector3 screenPoint = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y);
+                    screenPoint.z = 10.0f; //distance of the plane from the camera
+                    transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+                    }
                     break;
                 case GemState.SkillInventory:
                 {

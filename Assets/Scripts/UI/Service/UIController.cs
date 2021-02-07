@@ -1,4 +1,4 @@
-﻿//Created by Jorik Weymans 2020
+﻿//Created by Jorik Weymans 2021
 
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ namespace Jorik
 
             _Input = Resources.Load<Input.Input>("DefaultInput");
             _Input.Generate();
-
+            
             _Input.UIInput.TogglePanels.SkillPanel.performed += _ => ToggleSkillPanel();
             _Input.UIInput.TogglePanels.InventoryPanel.performed += _ => ToggleInventoryPanel();
 

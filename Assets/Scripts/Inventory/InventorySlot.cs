@@ -1,38 +1,50 @@
-﻿//Created by Jorik Weymans 2020
+﻿//Created by Jorik Weymans 2021
 
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Jorik
 {
+    [RequireComponent(typeof(JButton))]
 	public sealed class InventorySlot : MonoBehaviour
     {
         private BaseGem _Gem = null;
 
-        private void OnTriggerEnter2D(Collider2D coll)
+        private void Awake()
         {
-            if (coll.CompareTag("Gem"))
+            JButton button = GetComponent<JButton>();
+            button.AddListener(JButton.ActionType.OnTriggerEnter, TriggerEnter);
+            button.AddListener(JButton.ActionType.OnPointerUp, PointerUp);
+            button.AddListener(JButton.ActionType.OnPointerHover, PointerHovering);
+        }
+
+
+        private void TriggerEnter(Collider2D coll)
+        {
+
+        }
+
+        private void PointerHovering(PointerEventData eventData)
+        {
+        }
+        private void PointerUp(PointerEventData eventData)
+        {
+            Debug.Log("Pointer UP");
+            if (Cursor.HasGem())
             {
-                BaseGem baseGem = coll.gameObject.GetComponent<BaseGem>();
-                if (baseGem == null) return;
+                _Gem = Cursor.RemoveGem();
 
-                if (baseGem._State == GemState.Cursor)
-                {
-                    baseGem._State = GemState.CharacterInventory;
+                RectTransform rect = GetComponent<RectTransform>();
 
-                    
-                    RectTransform rect = GetComponent<RectTransform>();
+                Vector3 newPosition = rect.transform.position;
 
-                    Vector3 newPosition = rect.transform.position;
-                   //newPosition.x += rect.rect.width;//* .5f;
-                   //newPosition.y += rect.rect.height;// * .5f;
-
-                    coll.gameObject.transform.position = newPosition;
-
-                }
+                _Gem.gameObject.transform.position = newPosition;
             }
-            else
+            else if(_Gem)
             {
-                Debug.Log("It's something else");
+                Cursor.SetGem(_Gem);
+                _Gem = null;
             }
         }
 
