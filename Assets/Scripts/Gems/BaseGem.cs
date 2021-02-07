@@ -27,7 +27,7 @@ namespace Jorik
         [SerializeField] private string _Name = "Name";
         [SerializeField] private uint _ManaCost = 0;
         [SerializeField] private string _Description = "Description";
-        [SerializeField] private GemState _State = GemState.CharacterInventory;
+        [SerializeField] public GemState _State = GemState.CharacterInventory;
         [SerializeField] private GemAttribute _Attribute = GemAttribute.Intelligence;
 
 
