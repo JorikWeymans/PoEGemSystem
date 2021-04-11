@@ -7,9 +7,10 @@ using UnityEngine.EventSystems;
 namespace Jorik
 {
     [RequireComponent(typeof(JButton))]
-	public sealed class InventorySlot : MonoBehaviour
+	public sealed class ItemSlot : MonoBehaviour
     {
         private BaseGem _Gem = null;
+        public BaseGem Gem => _Gem;
 
         private void Awake()
         {
@@ -30,7 +31,6 @@ namespace Jorik
         }
         private void PointerUp(PointerEventData eventData)
         {
-            Debug.Log("Pointer UP");
             if (Cursor.HasGem())
             {
                 _Gem = Cursor.RemoveGem();
@@ -48,6 +48,10 @@ namespace Jorik
             }
         }
 
+        public void HideSlot(bool hide)
+        {
+            _Gem?.gameObject.SetActive(!hide);
+        }
     }
 }
 
