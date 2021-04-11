@@ -16,19 +16,12 @@ namespace Jorik
         OntheGround
     }
 
-    public enum GemAttribute
-    {
-        Strength,
-        Dexterity,
-        Intelligence
-    }
+
 	public sealed class BaseGem : MonoBehaviour
     {
-        [SerializeField] private string _Name = "Name";
-        [SerializeField] private uint _ManaCost = 0;
-        [SerializeField] private string _Description = "Description";
+        [SerializeField] private GemData _Data = null;
         [SerializeField] public GemState _State = GemState.CharacterInventory;
-        [SerializeField] private GemAttribute _Attribute = GemAttribute.Intelligence;
+
 
         private void Start()
         {
@@ -59,7 +52,6 @@ namespace Jorik
                     break;
                 case GemState.OntheGround:
                     throw new NotImplementedException("BaseGem::_State::OnTheGround");
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

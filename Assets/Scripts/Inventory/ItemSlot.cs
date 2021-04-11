@@ -1,17 +1,20 @@
 ﻿//Created by Jorik Weymans 2021
 
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Jorik
 {
     [RequireComponent(typeof(JButton))]
-	public sealed class ItemSlot : MonoBehaviour
+	public class ItemSlot : MonoBehaviour
     {
         private BaseGem _Gem = null;
         public BaseGem Gem => _Gem;
 
+        [SerializeField] protected bool _SlotCanBeModified = true;
+        public bool SlotCanBeModified => _SlotCanBeModified;
         private void Awake()
         {
             JButton button = GetComponent<JButton>();
@@ -31,6 +34,8 @@ namespace Jorik
         }
         private void PointerUp(PointerEventData eventData)
         {
+            if (!_SlotCanBeModified) return;
+
             if (Cursor.HasGem())
             {
                 _Gem = Cursor.RemoveGem();

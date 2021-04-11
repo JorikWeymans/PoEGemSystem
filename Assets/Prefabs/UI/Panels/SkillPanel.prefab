@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3376271941816627497}
   - component: {fileID: 5403779670136952768}
   - component: {fileID: 8383245314498836958}
+  - component: {fileID: 7711085710388104192}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: SkillLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,6 +78,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7711085710388104192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162060071914451444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2baad72594c33041a352a94e9100b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4028629532277185730
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +101,9 @@ GameObject:
   - component: {fileID: 6586062738947154647}
   - component: {fileID: 6121515755057289717}
   - component: {fileID: 793459880250802979}
+  - component: {fileID: 5546443874878564760}
+  - component: {fileID: 7761215836089848674}
+  - component: {fileID: 5236741316022540299}
   m_Layer: 5
   m_Name: ConrerLeftBot (5)
   m_TagString: Untagged
@@ -113,7 +129,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57, y: 57.5}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6121515755057289717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -152,6 +168,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &5546443874878564760
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028629532277185730}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57.7, y: 56.7}
+  m_EdgeRadius: 0
+--- !u!114 &7761215836089848674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028629532277185730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179c34b1f83986428efe09507c8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5236741316022540299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028629532277185730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018bf78915199734d971f627c976b106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SlotCanBeModified: 0
 --- !u!1 &4459309379056527955
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +230,9 @@ GameObject:
   - component: {fileID: 6856915549821301198}
   - component: {fileID: 6416249680564558230}
   - component: {fileID: 7076180354425734147}
+  - component: {fileID: 1453134541951362123}
+  - component: {fileID: 203278747137699146}
+  - component: {fileID: 2604645730607020338}
   m_Layer: 5
   m_Name: ConrerLeftBot (6)
   m_TagString: Untagged
@@ -188,7 +258,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57, y: 57.5}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6416249680564558230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -227,6 +297,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &1453134541951362123
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459309379056527955}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57.7, y: 56.7}
+  m_EdgeRadius: 0
+--- !u!114 &203278747137699146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459309379056527955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179c34b1f83986428efe09507c8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2604645730607020338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459309379056527955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018bf78915199734d971f627c976b106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SlotCanBeModified: 0
 --- !u!1 &5150716580961720016
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +359,9 @@ GameObject:
   - component: {fileID: 6389206428338782671}
   - component: {fileID: 4181962252160440197}
   - component: {fileID: 7538225121186810859}
+  - component: {fileID: 6449195571420935229}
+  - component: {fileID: 2066325199709660937}
+  - component: {fileID: 2292913906102600463}
   m_Layer: 5
   m_Name: ConrerLeftBot (1)
   m_TagString: Untagged
@@ -263,7 +387,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57, y: 57.5}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4181962252160440197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -302,6 +426,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &6449195571420935229
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150716580961720016}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57.7, y: 56.7}
+  m_EdgeRadius: 0
+--- !u!114 &2066325199709660937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150716580961720016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179c34b1f83986428efe09507c8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2292913906102600463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150716580961720016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018bf78915199734d971f627c976b106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SlotCanBeModified: 1
 --- !u!1 &5320104288859342024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Buttons:
     _Buttons: []
-  _Text: {fileID: 0}
+  _Line: {fileID: 7711085710388104192}
 --- !u!1 &5938748492106763083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1472,9 @@ GameObject:
   - component: {fileID: 4436554574982284353}
   - component: {fileID: 2837200838457371493}
   - component: {fileID: 6297166789237167989}
+  - component: {fileID: 2084338164236781893}
+  - component: {fileID: 5867077948337230568}
+  - component: {fileID: 3109882689789497812}
   m_Layer: 5
   m_Name: ConrerLeftBot (4)
   m_TagString: Untagged
@@ -1322,7 +1500,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57, y: 57.5}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2837200838457371493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1361,6 +1539,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &2084338164236781893
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032306585184117118}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57.7, y: 56.7}
+  m_EdgeRadius: 0
+--- !u!114 &5867077948337230568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032306585184117118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179c34b1f83986428efe09507c8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3109882689789497812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032306585184117118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018bf78915199734d971f627c976b106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SlotCanBeModified: 0
 --- !u!1 &6142991572718901673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1676,9 @@ GameObject:
   - component: {fileID: 6549957789459807025}
   - component: {fileID: 6684781396470777308}
   - component: {fileID: 6031591293955189095}
+  - component: {fileID: 5236415248258534936}
+  - component: {fileID: 2019155846263662092}
+  - component: {fileID: 4247080888418101815}
   m_Layer: 5
   m_Name: ConrerLeftBot (3)
   m_TagString: Untagged
@@ -1472,7 +1704,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57, y: 57.5}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6684781396470777308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1511,6 +1743,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &5236415248258534936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372677411221417139}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57.7, y: 56.7}
+  m_EdgeRadius: 0
+--- !u!114 &2019155846263662092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372677411221417139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179c34b1f83986428efe09507c8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4247080888418101815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372677411221417139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018bf78915199734d971f627c976b106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SlotCanBeModified: 0
 --- !u!1 &7417445218403548643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1805,9 @@ GameObject:
   - component: {fileID: 1158209383232741038}
   - component: {fileID: 5328635094499377754}
   - component: {fileID: 6885485503205614628}
+  - component: {fileID: 1155055332680695145}
+  - component: {fileID: 7920666792073258848}
+  - component: {fileID: 5915275410362233363}
   m_Layer: 5
   m_Name: ConrerLeftBot (2)
   m_TagString: Untagged
@@ -1547,7 +1833,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57, y: 57.5}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5328635094499377754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1586,3 +1872,54 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!61 &1155055332680695145
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417445218403548643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 57.7, y: 56.7}
+  m_EdgeRadius: 0
+--- !u!114 &7920666792073258848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417445218403548643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179c34b1f83986428efe09507c8214d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5915275410362233363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417445218403548643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018bf78915199734d971f627c976b106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SlotCanBeModified: 0

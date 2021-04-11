@@ -578,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Buttons:
     _Buttons: []
+  _GoInventorySlotHolder: {fileID: 8327133014116326534}
 --- !u!1 &4603920428887937093
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4603920428950971690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -954,7 +955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4603920429389393490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1084,7 +1085,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8327133014116326534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2749114481874929060}
@@ -1110,7 +1111,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8327133014116326534}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &1862660963962573996
 MonoBehaviour:
   m_ObjectHideFlags: 0
