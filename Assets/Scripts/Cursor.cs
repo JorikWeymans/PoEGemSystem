@@ -9,12 +9,12 @@ namespace Jorik
 
 
         public static bool HasGem() => _GemOnCursor != null;
-        public static BaseGem GetBem() => _GemOnCursor;
+        public static BaseGem GetGem() => _GemOnCursor;
 
         public static BaseGem RemoveGem()
         {
             BaseGem returnGem = _GemOnCursor;
-            returnGem._State = GemState.CharacterInventory;
+            returnGem.State = GemState.CharacterInventory;
 
             _GemOnCursor = null;
             
@@ -24,7 +24,7 @@ namespace Jorik
         public static void SetGem(BaseGem gem)
         {
             _GemOnCursor = gem;
-            _GemOnCursor._State = GemState.Cursor;
+            _GemOnCursor.State = GemState.Cursor;
         }
 
     }

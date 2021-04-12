@@ -9,11 +9,11 @@ namespace Jorik
     public sealed class InventoryPanel : UIPanel
     {
         [SerializeField] private GameObject _GoInventorySlotHolder = null;
-        private List<ItemSlot> _Slots = new List<ItemSlot>();  
+        private List<BaseItemSlot> _Slots = new List<BaseItemSlot>();  
         protected override void InternalAwake()
         {
-            ItemSlot[] slots = _GoInventorySlotHolder.GetComponentsInChildren<ItemSlot>();
-            foreach (ItemSlot itemSlot in slots)
+            BaseItemSlot[] slots = _GoInventorySlotHolder.GetComponentsInChildren<BaseItemSlot>();
+            foreach (BaseItemSlot itemSlot in slots)
             {
                 _Slots.Add(itemSlot);
             }

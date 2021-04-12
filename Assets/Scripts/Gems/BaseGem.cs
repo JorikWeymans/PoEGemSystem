@@ -17,16 +17,24 @@ namespace Jorik
     }
 
 
-	public sealed class BaseGem : MonoBehaviour
+	public class BaseGem : MonoBehaviour
     {
         [SerializeField] private GemData _Data = null;
-        [SerializeField] public GemState _State = GemState.CharacterInventory;
+        [SerializeField] private GemState _State = GemState.CharacterInventory;
+        public GemState State
+        {
+            get => _State;
+            set => _State = value;
+        }
 
+        public GemType Type => _Data.Type;
 
+        [SerializeField] private bool _StartOnCursor = false;// Temporary while testing
         private void Start()
         {
-            //Temporary while testing the gem system to work with one gem
-            Cursor.SetGem(this);
+
+            if(_StartOnCursor)
+                Cursor.SetGem(this);
         }
 
         private void Update()
